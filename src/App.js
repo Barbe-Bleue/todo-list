@@ -20,14 +20,20 @@ const TodoList = Loadable({
   loading: Loading,
 });
 
+const NotFound = Loadable({
+  loader: () => import('./NotFound/NotFound'),
+  loading: Loading,
+});
+
 class App extends Component {
   render() {
     return (
       <Router>
         <Switch>
           <Route exact path="/todo" component={TodoList}/>
-          <Route path="/about" component={About}/>
-          <Route path="/" component={Home}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/" component={Home}/>
+          <Route component={NotFound}/>
         </Switch>
       </Router>
     );
