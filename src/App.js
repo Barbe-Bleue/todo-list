@@ -25,6 +25,11 @@ const NotFound = Loadable({
   loading: Loading,
 });
 
+const SignUp = Loadable({
+  loader: () => import('./SignUp/SignUp'),
+  loading: Loading,
+});
+
 class App extends Component {
   render() {
     return (
@@ -33,6 +38,7 @@ class App extends Component {
           <Route exact path="/todo" component={TodoList}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/signup" component={SignUp}/>
           <Route component={NotFound}/>
         </Switch>
       </Router>
