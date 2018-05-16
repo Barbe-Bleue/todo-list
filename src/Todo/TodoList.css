@@ -1,0 +1,9 @@
+.items{
+  margin-top: 10px;
+}
+.item{
+  border-bottom: dotted;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}

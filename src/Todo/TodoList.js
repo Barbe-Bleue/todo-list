@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './TodoList.css'
 class TodoList extends Component {
 
   // Déclarations des variables de base
@@ -52,7 +52,8 @@ class TodoList extends Component {
     // item = un des items (key => value)
     return this.state.items.map((item) => {
       return (
-        <li className="list-group-item d-flex justify-content-between align-items-center" key={item}>
+        <li className="list-group-item d-flex justify-content-between
+          align-items-center item" key={item}>
           {item}
           <button
             onClick={this.deleteTodo.bind(this, item)}
@@ -86,7 +87,7 @@ class TodoList extends Component {
             </button>
           </div>
         </form>
-        <ul className="list-group col-5">
+        <ul className="list-group col-5 items">
           {this.renderTodos()}
         </ul>
       </div>
