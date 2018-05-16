@@ -36,15 +36,21 @@ class Hi extends Component {
       <div>
         <p>C'est quoi ton petit nom à toi ? </p>
         <form className="form-row">
-          <input
-            type="text"
-            placeholder="Allez ne soit pas timide..."
-            value={this.state.userInput}
-            onChange={this.onChange.bind(this)} // Update de l'input
-          />
-          <button onClick={this.displayName.bind(this)}>
-            Bonsoir
-          </button>
+          <div className="col-7 col-offset-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Allez ne soit pas timide..."
+              value={this.state.userInput}
+              onChange={this.onChange.bind(this)} // Update de l'input
+            />
+          </div>
+          <div className="col-auto">
+            <button onClick={this.displayName.bind(this)}
+              className="form-control btn btn-primary "
+              >Bonsoir
+            </button>
+          </div>
         </form>
         <h3>
           {this.renderUserName()}
