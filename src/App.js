@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import TodoList from './Todo/TodoList';
-import About from './About/About';
-import Home from './Home/Home';
+import Loadable from 'react-loadable';
 import './App.css';
+
+const Loading = () => <div>Loading...</div>;
+
+const Home = Loadable({
+  loader: () => import('./Home/Home'),
+  loading: Loading,
+});
+
+const About = Loadable({
+  loader: () => import('./About/About'),
+  loading: Loading,
+});
+
+const TodoList = Loadable({
+  loader: () => import('./Todo/TodoList'),
+  loading: Loading,
+});
 
 class App extends Component {
   render() {
