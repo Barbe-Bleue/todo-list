@@ -19,6 +19,7 @@ class Home extends Component {
         <ul className="list-group">
           <li className="list-group-item"><a href="/todo">Todo list</a></li>
           <li className="list-group-item"><a href="/about">About</a></li>
+          <li className="list-group-item"><a href="/ptdr">Not found</a></li>
         </ul>
       </div>
     );
