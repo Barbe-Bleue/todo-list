@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import Hi from './Hi';
 
 class Home extends Component {
+
   render() {
     return(
       <div className="App">
@@ -12,6 +14,8 @@ class Home extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        {/* component pour le form */}
+        <Hi />
         <ul className="list-group">
           <li className="list-group-item"><a href="/todo">Todo list</a></li>
           <li className="list-group-item"><a href="/about">About</a></li>
