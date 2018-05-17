@@ -1,33 +1,73 @@
 import React, { Component } from 'react';
 
 class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      username: '',
+      email: '',
+      password: '',
+      city: '',
+      state: '',
+      zip: '',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  // for multiple input
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value
+    const name = target.id;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(this.state);
+    for(var item in this.state){
+      console.log(this.state[item]);
+    }
+  }
+
   render() {
     return (
     <div>
-      <form>
+      <form onSubmit={this.handleSubmit.bind(this)}>
         <div className="form-row">
           <div className="col-md-4 mb-3">
-            <label for="validationDefault01">First name</label>
+            <label htmlFor="firstName">First name</label>
             <input
               type="text"
               className="form-control"
-              id="validationDefault01"
+              id="firstName"
               placeholder="First name"
               required
+              value={this.state.value}
+              onChange={this.handleChange}
             />
           </div>
           <div className="col-md-4 mb-3">
-            <label for="validationDefault02">Last name</label>
+            <label htmlFor="lastName">Last name</label>
             <input
               type="text"
               className="form-control"
-              id="validationDefault02"
+              id="lastName"
               placeholder="Last name"
               required
+              value={this.state.value}
+              onChange={this.handleChange}
             />
           </div>
           <div className="col-md-4 mb-3">
-            <label for="validationDefaultUsername">Username</label>
+            <label htmlFor="username">Username</label>
             <div className="input-group">
               <div className="input-group-prepend">
                 <span className="input-group-text" id="inputGroupPrepend2">@</span>
@@ -35,70 +75,81 @@ class SignUp extends Component {
               <input
                 type="text"
                 className="form-control"
-                id="validationDefaultUsername"
+                id="username"
                 placeholder="Username"
-                aria-describedby="inputGroupPrepend2" required
+                aria-describedby="inputGroupPrepend2"
+                required
+                value={this.state.value}
+                onChange={this.handleChange}
               />
             </div>
           </div>
         </div>
         <div className="form-row">
           <div className="col-md-4 mb-3">
-           <label for="exampleInputEmail1">Email address</label>
+           <label htmlFor="email">Email address</label>
            <input
              type="email"
              className="form-control"
-             id="exampleInputEmail1"
+             id="email"
              aria-describedby="emailHelp"
              placeholder="Enter email"
              required
+             value={this.state.value}
+             onChange={this.handleChange}
            />
            <small id="emailHelp" className="form-text text-muted">
              We'll never share your email with anyone else.
            </small>
          </div>
          <div className="col-md-8 mb-3">
-           <label for="exampleInputPassword1">Password</label>
+           <label htmlFor="password">Password</label>
            <input
              type="password"
              className="form-control"
-             id="exampleInputPassword1"
+             id="password"
              placeholder="Password"
              required
+             value={this.state.value}
+             onChange={this.handleChange}
            />
          </div>
        </div>
-
-
         <div className="form-row">
           <div className="col-md-6 mb-3">
-            <label for="validationDefault03">City</label>
+            <label htmlFor="city">City</label>
             <input
               type="text"
               className="form-control"
-              id="validationDefault03"
+              id="city"
               placeholder="City"
               required
+              value={this.state.value}
+              onChange={this.handleChange}
             />
           </div>
           <div className="col-md-3 mb-3">
-            <label for="validationDefault04">State</label>
+            <label htmlFor="state">State</label>
             <input
               type="text"
               className="form-control"
-              id="validationDefault04"
+              id="state"
               placeholder="State"
               required
+              value={this.state.value}
+              onChange={this.handleChange}
             />
           </div>
           <div className="col-md-3 mb-3">
-            <label for="validationDefault05">Zip</label>
+            <label htmlFor="zip">Zip</label>
             <input
               type="text"
               className="form-control"
-              id="validationDefault05"
+              id="zip"
               placeholder="Zip"
               required
+              value={this.state.value}
+              onChange={this.handleChange}
             />
           </div>
         </div>
@@ -108,15 +159,15 @@ class SignUp extends Component {
               className="form-check-input"
               type="checkbox"
               value=""
-              id="invalidCheck2"
+              id="conditions"
               required
             />
-            <label className="form-check-label" for="invalidCheck2">
+            <label className="form-check-label" htmlFor="conditions">
               Agree to terms and conditions
             </label>
           </div>
         </div>
-        <button className="btn btn-primary" type="submit">Submit form</button>
+        <input className="btn btn-primary" type="submit" value="Submit"/>
       </form>
     </div>
     );
