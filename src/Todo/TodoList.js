@@ -9,6 +9,10 @@ class TodoList extends Component {
       userInput: '',
       items: []
     };
+
+    this.onChange = this.onChange.bind(this);
+    this.addTodo = this.addTodo.bind(this);
+    this.deleteTodo = this.deleteTodo.bind(this,item);
   }
 
   onChange(event) {
@@ -56,7 +60,7 @@ class TodoList extends Component {
           align-items-center item" key={item}>
           {item}
           <button
-            onClick={this.deleteTodo.bind(this, item)}
+            onClick={this.deleteTodo(item)}
             className="btn btn-danger"
             >Supprimer
           </button>
@@ -75,13 +79,13 @@ class TodoList extends Component {
               value={this.state.userInput}
               type="text"
               placeholder="Oui ?"
-              onChange={this.onChange.bind(this)} // Update de l'input
+              onChange={this.onChange} // Update de l'input
             />
           </div>
 
           <div className="col">
             <button
-              onClick={this.addTodo.bind(this)}
+              onClick={this.addTodo}
               className="btn btn-primary form-control">
               Ajouter
             </button>
