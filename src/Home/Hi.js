@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Hi.css';
 
 class Hi extends Component {
   constructor() {
@@ -26,8 +27,21 @@ class Hi extends Component {
       // renit après ajout d'un nom
       userInput: '',
       // stockage de la variable
-      userName: 'Salut à toi '+ this.state.userInput + ' !'
+      userName: this.state.userInput
     });
+  }
+
+  gif() {
+    if (this.state.userName) {
+      return(
+        <div className="magic">
+          <div>
+            <h1 id="pseudo">SALUT {this.state.userName.toUpperCase()} !</h1>
+            <button className="btn btn-primary">fermer</button>
+          </div>
+        </div>
+      );
+    }
   }
 
   render() {
@@ -52,7 +66,7 @@ class Hi extends Component {
           </div>
         </form>
         <h3>
-          {this.state.userName}
+          {this.gif()}
         </h3>
       </div>
     );
