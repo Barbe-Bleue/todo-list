@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import Hi from './Hi';
+import Login from '../Login/Login'
 
 class Home extends Component {
 
@@ -11,14 +12,17 @@ class Home extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Mes projets React</h1>
         </header>
-        {/* component pour le form */}
-        <Hi />
-        <ul className="list-group">
-          <li className="list-group-item"><a href="/todo">Todo list</a></li>
-          <li className="list-group-item"><a href="/about">About</a></li>
-          <li className="list-group-item"><a href="/signup">SignUp</a></li>
-          <li className="list-group-item"><a href="/ptdr">Not found</a></li>
-        </ul>
+        <Hi /> {/* component pour le form */}
+        <Login />  {/* component pour le login */}
+        <div>
+          <ul className="list-group">
+            <li className="list-group-item"><a href="/todo">Todo list</a></li>
+            <li className="list-group-item"><a href="/about">About</a></li>
+            <li className="list-group-item"><a href="/signup">SignUp</a></li>
+            <li className="list-group-item"><a href="/login">Login</a></li>
+            <li className="list-group-item"><a href="/ptdr">Not found</a></li>
+          </ul>
+        </div>
       </div>
     );
   }
