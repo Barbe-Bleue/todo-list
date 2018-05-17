@@ -6,13 +6,12 @@ class TodoList extends Component {
   constructor() {
     super();
     this.state = {
-      userInput: '',
+      userInput: null,
       items: []
     };
 
     this.onChange = this.onChange.bind(this);
     this.addTodo = this.addTodo.bind(this);
-    this.deleteTodo = this.deleteTodo.bind(this,item);
   }
 
   onChange(event) {
@@ -31,7 +30,7 @@ class TodoList extends Component {
 
     this.setState({
       // renit après ajout d'un item
-      userInput: '',
+      userInput: null,
       // On reprend le tableau à l'origine, et ajout du nouvel item
       items: [...this.state.items, this.state.userInput]
     },() => console.log(this.state.items));
@@ -60,7 +59,7 @@ class TodoList extends Component {
           align-items-center item" key={item}>
           {item}
           <button
-            onClick={this.deleteTodo(item)}
+            onClick={this.deleteTodo.bind(this, item)}
             className="btn btn-danger"
             >Supprimer
           </button>
@@ -80,6 +79,7 @@ class TodoList extends Component {
               type="text"
               placeholder="Oui ?"
               onChange={this.onChange} // Update de l'input
+              required
             />
           </div>
 

@@ -7,6 +7,9 @@ class Hi extends Component {
       userInput: '',
       userName: '',
     };
+
+    this.displayName = this.displayName.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   onChange(event) {
@@ -26,11 +29,7 @@ class Hi extends Component {
       userName: 'Salut à toi '+ this.state.userInput + ' !'
     });
   }
-
-  renderUserName() {
-    return this.state.userName;
-  }
-
+  
   render() {
     return(
       <div>
@@ -42,18 +41,18 @@ class Hi extends Component {
               className="form-control"
               placeholder="Allez ne soit pas timide..."
               value={this.state.userInput}
-              onChange={this.onChange.bind(this)} // Update de l'input
+              onChange={this.onChange} // Update de l'input
             />
           </div>
           <div className="col-auto">
-            <button onClick={this.displayName.bind(this)}
+            <button onClick={this.displayName}
               className="form-control btn btn-primary "
               >Bonsoir
             </button>
           </div>
         </form>
         <h3>
-          {this.renderUserName()}
+          {this.state.userName}
         </h3>
       </div>
     );
