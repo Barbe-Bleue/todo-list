@@ -29,10 +29,10 @@ class Hi extends Component {
       userName: 'Salut à toi '+ this.state.userInput + ' !'
     });
   }
-  
+
   render() {
     return(
-      <div>
+      <div className="component">
         <p>C'est quoi ton petit nom à toi ? </p>
         <form className="form-row">
           <div className="col-7 col-offset-3">

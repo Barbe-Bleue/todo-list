@@ -39,7 +39,7 @@ class SignUp extends Component {
 
   render() {
     return (
-    <div>
+    <div className="component">
       <form onSubmit={this.handleSubmit.bind(this)}>
         <div className="form-row">
           <div className="col-md-4 mb-3">

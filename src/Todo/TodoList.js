@@ -69,7 +69,7 @@ class TodoList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="component">
         <h1 align="center">Ma Todo List</h1>
         <form className="form-row">
           <div className="col-9">
