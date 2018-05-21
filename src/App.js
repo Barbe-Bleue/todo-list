@@ -34,6 +34,12 @@ const Login = Loadable({
   loader: () => import('./Login/Login'),
   loading: Loading,
 });
+
+const Meteo = Loadable({
+  loader: () => import('./Meteo/Meteo'),
+  loading: Loading,
+});
+
 class App extends Component {
   render() {
     return (
@@ -44,6 +50,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route exact path="/signup" component={SignUp}/>
           <Route exact path="/login" component={Login}/>
+          <Route exact path="/meteo" component={Meteo}/>
           <Route component={NotFound}/>
         </Switch>
       </Router>

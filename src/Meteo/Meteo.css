@@ -1,0 +1,49 @@
+body{
+  background: rgba(30,109,235,1);
+  background: -moz-linear-gradient(top, rgba(30,109,235,1) 0%, rgba(17,199,255,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,109,235,1)), color-stop(100%, rgba(17,199,255,1)));
+  background: -webkit-linear-gradient(top, rgba(30,109,235,1) 0%, rgba(17,199,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(30,109,235,1) 0%, rgba(17,199,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(30,109,235,1) 0%, rgba(17,199,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,109,235,1) 0%, rgba(17,199,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e6deb', endColorstr='#11c7ff', GradientType=0 );
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@font-face {
+  font-family: Pacifico;
+  src: url(./Pacifico.ttf);
+}
+#welcome{
+  margin:auto;
+  width: 50%;
+}
+h1 {
+  font-family: Pacifico;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+}
+.logo{
+  width: 200px;
+  margin: auto;
+  display: block;
+
+}
+#search{
+
+  margin:auto;
+  margin-top: 50px;
+  width: 50%;
+}
+
+#city{
+  font-family: Pacifico;
+  width: 70%;
+  margin: auto;
+  font-size:22pt;
+  background-color: inherit;
+  border: 0 solid cyan;
+  border-bottom-width: 1px;
+}
