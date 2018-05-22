@@ -7,11 +7,11 @@ class Meteo extends Component {
       <div>
         <div id="welcome">
           <h1>Elecblue</h1>
-          <img src="./cloud.png" class="logo"/>
+          <img src="./cloud.png" class="logo" alt="Nuage"/>
         </div>
         <div id="search">
           <input type="text" id="city" placeholder="Paris, Nice..."/>
-          <input type="image" src="./sun.png" id="go" value="GO"/>
+          <img src="./sun.png" alt="sun" id="go" value="GO"/>
         </div>
         <div id="res">
           <p id="meteo"> </p>
@@ -22,3 +22,5 @@ class Meteo extends Component {
 }
 
 export default Meteo;
+
+// TODO: appeler l'api méteo

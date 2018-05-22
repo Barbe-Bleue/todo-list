@@ -4,7 +4,7 @@ class Login extends Component {
 
   render() {
     return(
-      <div class="formLogin" className="component">
+      <div className="formLogin component">
         <form>
           <div className="form-group col-auto" align="left">
             <label htmlFor="email">Email address</label>
