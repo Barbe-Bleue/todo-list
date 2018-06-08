@@ -78,9 +78,9 @@ class TodoList extends Component {
               value={this.state.userInput}
               type="text"
               placeholder="Oui ?"
-              onChange={this.onChange} // Update de l'input
+              onChange={this.onChange}
               required
-            />
+            />// Update de l'input
           </div>
 
           <div className="col">
