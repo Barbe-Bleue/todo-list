@@ -20,11 +20,6 @@ const TodoList = Loadable({
   loading: Loading,
 });
 
-const NotFound = Loadable({
-  loader: () => import('./NotFound/NotFound'),
-  loading: Loading,
-});
-
 const SignUp = Loadable({
   loader: () => import('./SignUp/SignUp'),
   loading: Loading,
@@ -51,7 +46,6 @@ class App extends Component {
           <Route exact path="/signup" component={SignUp}/>
           <Route exact path="/login" component={Login}/>
           <Route exact path="/meteo" component={Meteo}/>
-          <Route component={NotFound}/>
         </Switch>
       </Router>
     );
