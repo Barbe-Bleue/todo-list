@@ -4,7 +4,7 @@
   "homepage": "http://Barbe-Bleue.github.io/todo-list",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-loadable": "^5.4.0",
